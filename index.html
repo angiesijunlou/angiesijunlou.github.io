@@ -1,1 +1,2158 @@
-Hello World
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Map of Tibetan Self-Immolations</title>
+		<meta name="Map of Tibetan Self-Immolations" content="Free Tibet" />
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/ammap.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/maps/js/chinaLow.js"></script>
+
+		<script type="text/javascript">
+			$('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+		</script>
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+
+		$(document).ready(function() {
+
+		var map = AmCharts.makeChart("map",{
+					"type": "map",
+					"pathToImages": "http://www.amcharts.com/lib/3/images/",
+					"addClassNames": true,
+					"fontSize": 15,
+					"color": "#000000",
+					"projection": "mercator",
+					"backgroundAlpha": 1,
+					"backgroundColor": "white",
+					"dataProvider": {
+						"map": "chinaLow",
+						"getAreasFromMap": true,
+						"areas": [{
+      						// hide Taiwan
+      						"id": "CN-71",
+      						"alpha": 0,
+      						"mouseEnabled": false
+    					}],
+						"images": [
+							{
+								"top": 40,
+								"left": 60,
+								"width": 80,
+								"height": 40,
+								"pixelMapperLogo": true,
+								"imageURL": "",
+								"url": "",
+							},
+							{
+								"selectable": true,
+								"title": "Lhasa (2)",
+								"longitude": 91.3536,
+								"latitude": 29.4498,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "lhasa_x"
+							},
+							{
+								"selectable": true,
+								"title": "Damshung (1)",
+								"longitude": 91.228,
+								"latitude": 30.7588,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "damshung_x"
+							},
+							{
+								"selectable": true,
+								"title": "Nagchu (4)",
+								"longitude": 92.8602,
+								"latitude": 31.568,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "nagchu_x"
+							},
+							{
+								"selectable": true,
+								"title": "Chamdo (1)",
+								"longitude": 98.0708,
+								"latitude": 31.1913,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "chamdo_x"
+							},
+							{
+								"selectable": true,
+								"title": "Kardze (2)",
+								"longitude": 100.3936,
+								"latitude": 30.161,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "kardze_x"
+							},
+							{
+								"selectable": true,
+								"title": "Tawu (3)",
+								"longitude": 101.398,
+								"latitude": 29.0097,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "tawu_x"
+							},
+							{
+								"selectable": true,
+								"title": "Dzamthang",
+								"longitude": 101.2048,
+								"latitude": 31.0435,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "dzamthang_x"
+							},
+							{
+								"selectable": true,
+								"title": "Ngaba (45)",
+								"longitude": 102.0258,
+								"latitude": 32.9541,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 1.3,
+								"id": "ngaba_x"
+							},
+							{
+								"selectable": true,
+								"title": "Barkham (3)",
+								"longitude": 103.5953,
+								"latitude": 30.27,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "barkham_x"
+							},
+							{
+								"selectable": true,
+								"title": "Dzatoe (3)",
+								"longitude": 94.5552,
+								"latitude": 33.5342,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "dzatoe_x"
+							},
+							{
+								"selectable": true,
+								"title": "Kyegudo (2)",
+								"longitude": 96.7525,
+								"latitude": 33.7441,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "kyegudo_x"
+							},
+							{
+								"selectable": true,
+								"title": "Tridu (1)",
+								"longitude": 97.0036,
+								"latitude": 34.5788,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "tridu_x"
+							},
+							{
+								"selectable": true,
+								"title": "Golok (1)",
+								"longitude": 98.6986,
+								"latitude": 33.7441,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "golok_x"
+							},
+							{
+								"selectable": true,
+								"title": "Darlag (1)",
+								"longitude": 98.9497,
+								"latitude": 34.4229,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "darlag_x"
+							},
+							{
+								"selectable": true,
+								"title": "Dokarmo (1) ",
+								"longitude": 99.703,
+								"latitude": 34.8379,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "dokarmo_x"
+							},
+							{
+								"selectable": true,
+								"title": "Machu (1) ",
+								"longitude": 102.0258,
+								"latitude": 34.1625,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "machu_x"
+							},
+							{
+								"selectable": true,
+								"title": "Sangchu (1) ",
+								"longitude": 102.1514,
+								"latitude": 34.8897,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "sangchu_x"
+							},
+							{
+								"selectable": true,
+								"title": "Luchu (7) ",
+								"longitude": 102.4652,
+								"latitude": 34.5788,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.6,
+								"id": "luchu_x"
+							},
+							{
+								"selectable": true,
+								"title": "Labrang (7) ",
+								"longitude": 101.398,
+								"latitude": 35.1478,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.6,
+								"id": "labrang_x"
+							},
+							{
+								"selectable": true,
+								"title": "Achok (4)",
+								"longitude": 102.7791,
+								"latitude": 35.9685,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "achok_x"
+							},
+							{
+								"selectable": true,
+								"title": "Tsoe (5) ",
+								"longitude": 102.9675,
+								"latitude": 36.5784,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "tsoe_x"
+							},
+							{
+								"selectable": true,
+								"title": "Yadzi (1) ",
+								"longitude": 101.4608,
+								"latitude": 36.3248,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "yadzi_x"
+							},
+							{
+								"selectable": true,
+								"title": "Chentsa (1) ",
+								"longitude": 102.1514,
+								"latitude": 36.7301,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "chentsa_x"
+							},
+							{
+								"selectable": true,
+								"title": "Rebkong (15) ",
+								"longitude": 100.7075,
+								"latitude": 35.9174,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.8,
+								"id": "rebkong_x"
+							},
+							{
+								"selectable": true,
+								"title": "Themchen (1)",
+								"longitude": 99.5147,
+								"latitude": 37.3341,
+								"svgPath": "M10.496,16.001C10.496,16.001,1.49,6.995,1.49,6.995C0.17,5.674,0.17,3.513,1.49,2.192C1.49,2.192,2.691,0.992,2.691,0.992C4.012,-0.33,6.173,-0.33,7.493,0.992C7.493,0.992,16.5,9.997,16.5,9.997C16.5,9.997,25.507,0.991,25.507,0.991C26.826,-0.33,28.987,-0.33,30.308,0.991C30.308,0.991,31.51,2.191,31.51,2.191C32.829,3.511,32.829,5.673,31.51,6.994C31.51,6.994,22.504,15.999,22.504,15.999C22.504,15.999,31.51,25.006,31.51,25.006C32.829,26.327,32.829,28.487,31.51,29.808C31.51,29.808,30.308,31.009,30.308,31.009C28.987,32.33,26.826,32.33,25.507,31.009C25.507,31.009,16.5,22.004,16.5,22.004C16.5,22.004,7.493,31.009,7.493,31.009C6.173,32.33,4.012,32.33,2.691,31.009C2.691,31.009,1.49,29.808,1.49,29.808C0.17,28.487,0.17,26.327,1.49,25.006C1.49,25.006,10.496,16.001,10.496,16.001C10.496,16.001,10.496,16.001,10.496,16.001",
+								"color": "white",
+								"scale": 0.4,
+								"id": "themchen_x"
+							}
+						]
+					},
+					"balloon": {
+						"horizontalPadding": 15,
+						"borderAlpha": 0,
+						"borderThickness": 1,
+						"verticalPadding": 15
+					},
+					"areasSettings": {
+						"color": "rgba(83,83,87,1)",
+						"outlineColor": "rgba(236,236,236,1)",
+						"rollOverOutlineColor": "rgba(236,236,236,1)",
+						"rollOverBrightness": 20,
+						"selectedBrightness": 20,
+						"selectable": true,
+						"unlistedAreasAlpha": 0,
+						"unlistedAreasOutlineAlpha": 0
+					},
+					"imagesSettings": {
+						"alpha": 1,
+						"color": "rgba(83,83,87,1)",
+						"outlineAlpha": 0,
+						"rollOverOutlineAlpha": 0,
+						"outlineColor": "rgba(236,236,236,1)",
+						"rollOverBrightness": 20,
+						"selectedBrightness": 20,
+						"selectable": true
+					},
+					"linesSettings": {
+						"color": "rgba(83,83,87,1)",
+						"selectable": true,
+						"rollOverBrightness": 20,
+						"selectedBrightness": 20
+					},
+					"zoomControl": {
+						"zoomControlEnabled": true,
+						"homeButtonEnabled": false,
+						"panControlEnabled": false,
+						"right": 38,
+						"bottom": 30,
+						"minZoomLevel": 0.25,
+						"gridHeight": 100,
+						"gridAlpha": 0.1,
+						"gridBackgroundAlpha": 0,
+						"gridColor": "#FFFFFF",
+						"draggerAlpha": 1,
+						"buttonCornerRadius": 2
+					}
+				});
+
+
+			map.addListener("clickMapObject", function (event) {
+				var section = document.getElementById(event.mapObject.id + "profilestop");
+    			$('html, body').animate({
+        			scrollTop: $(section).offset().top
+    				}, 800);
+			});
+
+			var amountScrolled = 300;
+
+			$(window).scroll(function() {
+				if ( $(window).scrollTop() > amountScrolled ) {
+					$('a.back-to-top').fadeIn('slow');
+				} else {
+					$('a.back-to-top').fadeOut('slow');
+				}
+			});
+
+			$('#historyheadline').click(function() {
+				$("#history").toggle();
+
+			});
+
+			$('#theoryheadline').click(function() {
+				$("#theory").toggle();
+			});
+
+			$('#sourcesheadline').click(function() {
+				$("#sources").toggle();
+			});
+
+			$('a.back-to-top').click(function() {
+				$('html, body').animate({
+					scrollTop: 0
+				}, 800);
+				alert("asdf");
+				return false;
+			});
+
+			$(document).mouseup(function (e){
+    			var container = $(".white_content");
+
+			    if (!container.is(e.target) // if the target of the click isn't the container...
+        			&& container.has(e.target).length === 0) // ... nor a descendant of the container
+    			{
+        			container.hide();
+        			document.getElementById('fade').style.display = 'none';
+    			}
+			});
+
+	});
+
+	</script>
+	</head>
+	<body>
+		<div id="headline">&mdash; The body as a colonized subject &mdash;</div>
+		<div id="subheadline"><i>A map of Tibetan martyrdom against the occupation of the Snow Land</i></div>
+
+		<a href="#" class="back-to-top">Back to Top</a>
+
+		<div id="quote"><mainquote>"I am sacrificing my body to stand in solidarity with [the Tibetan heroes] in flesh and blood... This is not to seek personal fame or glory. I am giving away my body as an offering of light to chase away the darkness, to free all beings from suffering... I am sacrificing my body with firm conviction and a pure heart just as the Buddha bravely gave his body to a hungry tigress to stop her from eating her cubs." <br>&mdash;Lama Sobha, self-immolated 8 January 2012   </mainquote></div>
+
+		<div id="map"></div>
+
+		<div id="introduction">
+		<span class="firstcharacter">S</span>ince 2009, over 140 indigenous Tibetans have set themselves on fire in retaliation against the Chinese state that occupies their land and psyches. This page is a compilation of all details I could find related to the lives they led, the people they loved, the suicide letters they wrote, and the last words they spoke. These are the records that have emerged despite China's attempts to erase traces of their bodies through cremation, and these are the stories that have been told despite the silence of the Great Firewall.
+		<br>
+		<p>This project is a small tribute to the the true heroes of Tibet, the ones who have made the greatest sacrifice for the freedom of their people. Through these portraits we can understand what it means to resist colonization using the physicality of the body, and how this resistance can outlast the mortality of the Self.
+		<br>
+		<p>The parable of the Buddha and the Hungry Tigress is ritually cited by Tibetan monks when they are asked if their defiance is in contradiction to Buddhist philosophy. The story is told like this: in one of Buddha's past lives, he came across a hungry tigress in the woods who was about to devour her children. The Buddha saw this and, without hesitation, sacrificed his own life in their place. In this one fluid act, the Buddha showed a divine detachment from the physicality of his body and a love for the vitality of all creatures. Although it is against his teachings to inflict harm upon the self, it is vindicated when this sacrifice is an act that alleviates collective suffering.
+		<br>
+		<p>The firmness of this conviction is captured by the last words of 20-year-old martyr Pawo Tsultrim, who set himself on fire on 1 January 2012. <i>"We have no saviors or protectors,"</i> he said. <i>"Brothers and Sisters of the Snow Land: Unite for Tibet."</i>
+		</div>
+
+		<div id="historyheadline">a history of self-immolation</div>
+		<div id="history">
+			<span class="firstcharacter">T</span>ibet's sovereignty has been interrupted by a series of colonizations from East Asian empires, but the Tibetan people and their ancestors have remained loyal to The Dalai Lama and the Central Tibetan Administration (CTA) since the 17th century. Their leadership was abruptly overthrown when the People's Republic invaded in 1959. Since then, the Dalai Lama and the CTA fled to Dharamsala, India and have been living there, in exile, for over five decades. 
+			<p>Today, there are more foreign journalists allowed in North Korea than in Tibet. This staggering secrecy makes any leak vital to understanding the climate of their exile. Since the People's Republic's invasion, China has committed acts of political repression, economic marginalization, environmental destruction, and cultural assimilation against native Tibetans. One million Tibetans have been killed as a direct result of the occupation, and there are now more Han Chinese people than Tibetans living in many parts of the country. 99 percent of Tibet's monasteries have been destroyed in an effort to expunge religion, and the country's freshwater resources have been monopolized and now supply billions of people throughout Asia. Intellectual property is also under strict surveillance: you can be tortured for flying a Tibetan flag or owning a photo of the Dalai Lama.
+			<p>The People's Republic has been met with much resistance against its cultural genocide. Self-immolation is a longstanding tradition that has been practiced by Buddhists for many centuries; in times of relative prosperity and peace, monks have abolished the body by feeding themselves to insects or drowning themselves in holy waters to manifest an Enlightened separation of the body and spirit. The earliest recording of self-immolation as a political protest dates back to the 7th century, in China, when five monks revolted against the religious persecution rampant in Emperor Wu's reign by setting themselves on fire.
+			<p>Self-immolation in modern retaliation against the Chinese state has several signature markings. The martyr often douses themselves in gasoline and embeds themselves in a location that is geographically significant: a temple, a nunnery, a police station, a government office, a shrine. The previous day can be unceremonious; loved ones are not signaled of the impending suicide to prevent brutal interrogation by the police after the martyr's death. After they set themselves on fire, they reveal the reasons for their sacrifice by shouting "Long live the Dalai Lama" and "Unite for the Snow Land" until they are engulfed in flames.
+			<p>Since 2009, there have been over 140 instances that follow this script. While we honor the individual martyrs and the conditions of their captivity, we must also extract the universal message they are sending to the world outside of the one their oppressors have made for them. We can hear its echo from across the ocean: Tibet will be free.
+		</div>
+
+		<div id="theoryheadline">taking back the body from the colonizer</div>			
+		<div id="theory">
+			<span class="firstcharacter">M</span>any of the non-profit organizations that claim to be working towards Tibetan independence are based in America and Europe: celebrities like Paris Hilton tweet "#FreeTibet" while the Gorillaz hold live aid concerts in their name, but many of these acts are nothing more than void performances of altruism. They occur without an intricate understanding of Tibetan histories, martyrs, and diasporas, and this reduces their struggles and afflictions to a hashtag. Therefore we must look deeper to avoid commodifying their lives with a Western, liberal conception of human rights.
+			<p>It's important to recognize that China and America are involved in a perpetual competition for global empire, and the discourse of human rights that exists between them is also a manifestation of this rivalry. They each summon the other's condemning record without acknowledging the atrocities committed by their own state. We must make it clear that when we criticize the colonization in Tibet, we also criticize the colonization of Palestine, Tanzania, Nicaragua, Fiji, and all nations in the Third World striving for liberation.
+			<p>There is a vital distinction that Black Panther Huey P. Newton makes between revolutionary suicide and reactionary suicide. In the West, the act of killing oneself is often seen as a sign of the individual's trauma rather than a method to alleviate collective suffering; it is always destructive, never constructive. American newspapers often write about martyrdom with a tone of condescending pity: "One woman's tragic path to self-immolation," "A desperate act of terrorism," "The burning question: bravery, or wasted life?" But many of these martyrs' suicide letters emphasize that without freedom in Tibet, <i>there is no difference between life and death.</i> This shows that the substance of life is measured not only by the physical but also by the metaphysical; the death of the body does not translate to a death of the being. If we prescribe to a Buddhist cosmology where death is a portal to reincarnation and immortality, then we can honor these martyrs the way the Tibetan people honor them: with respect for what is sacred.
+			<p>Bodies under colonialism are riddled with scars made by the colonizer. Therefore, the self-destruction of this body is a form of vandalism. After the martyr's suicide, the Chinese state and the local Tibetan people often struggle for custody over the remains; the indigenous people form a circle around the martyr to protect them from being cremated by the police. Many monks wrap themselves in barbed wire in order to prevent this cremation, which is an erasure of their revolt. Since a dead body does not pose a security threat, it is clear that the martyr's charred body is a symbol of their refusal to submit. In this way, the body itself is a combat zone. Through the destruction of it, the martyr escapes the rule of the colonizer and is liberated.
+		</div>
+		
+		<div id="profiles">
+
+			<div id="achok_xprofilestop"></div>
+			<div class="cityheadline">ACHOK, GANSU</div>
+			<div id="achok_xprofiles">
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('sangyalkhar_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/sangyalkhar.jpg">
+				<name>[ Sangyal Khar ]</name>
+				<br>
+				<date>16 December 2014</date>
+				</a>
+    			<div id="sangyalkhar_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('sangyalkhar_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Sangyal Khar ]</name>
+  		  		<br>
+  		  		<date>16 December 2014</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>34-year-old Sangyal Khar set himself on fire in front of the police station in Amchok Town. A Tibetan source said that Khar's charred body was taken to Sangchu County by the Chinese police who refused to hand over the body to his family despite protests from the local Tibetans. The situation in Amchok town remains tense as authorities cordoned off the area and put restrictions on local people's movement and communication lines. Sangyal Khar became the 134th Tibetan to immolate themselves in protest of the Chinese occupation, and the 114th martyr of Tibet.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('tseringtashi_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/tseringtashi.jpg">
+				<name>[ Tsering Tashi ]</name>
+				<br>
+				<date>12 January 2013</date>
+				</a>
+    			<div id="tseringtashi_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('tseringtashi_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Tsering Tashi ]</name>
+  		  		<br>
+  		  		<date>12 January 2013</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>22-year-old Tsering Tashi is the first Tibetan to set himself on fire in 2013. His body was removed from his home by authorities and cremated in the middle of the night before his family had a chance to carry out traditional prayer rituals.
+  		  		<br>
+  		  		<p>A harrowing video of his protest surfaced and showed Tsering Tashi lying on the street in flames, lifting his hands into a prayer position and saying the name of the Dalai Lama. According to relatives of Tsering Tashi who are now in exile, the authorities threatened the family after his self-immolation, with one official accusing them of having close ties with the "splittist Dalai group."
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('tseringdhondup_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/tseringdhondup.jpg">
+				<name>[ Tsering Dhondup ]</name>
+				<br>
+				<date>20 November 2012</date>
+				</a>
+    			<div id="tseringdhondup_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('tseringdhondup_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Tsering Dhondup ]</name>
+  		  		<br>
+  		  		<date>20 November 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>34-year-old Tsering Dhondup set himself on fire near the entrance of a mining site in Achok. This is the fourteenth fatal protest to have taken place in Tibet in November, representing an influx of resistance to the increasing oppression of the Chinese regime.
+  		  		<br>
+  		  		<br>
+  		  		<p>The Chinese administration in this province has offered a bribe for information on anyone linked to Tibetan militancy.Any informant will be given more money than any government official makes in a year. At the same time, a police block has caused media and foreigners to be banned from entering Tibet as a method for isolation.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('lhamotseten_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/lhamotseten.jpg">
+				<name>[ Lhamo Tseten ]</name>
+				<br>
+				<date>26 October 2012</date>
+				</a>
+    			<div id="lhamotseten_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('lhamotseten_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Lhamo Tseten ]</name>
+  		  		<br>
+  		  		<date>26 October 2012</date></center>
+  		  		<br>
+  		  		<br>
+  		  		<quote>
+  		  		<p>24-year-old Lhamo Tseten visited a restaurant in Achok with his friends and then walked outside and set himself on fire close to a military camp and local court building. Eyewitnesses say he called for the return of His Holiness the Dalai Lama and the freedom of Tibet.
+  		  		<br>
+  		  		<br>
+  		  		<p>A Tibetan in exile who is from the area said: <i>"Lhamo Tseten was still shouting when he collapsed. People said that when on the ground Lhamo Tseten still put his hands together as if he were praying."</i> Local people took his body back to his home, where monks from Amchok monastery held prayers.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+
+			</div>
+			
+			<div id="barkham_xprofilestop"></div>
+			<div class="cityheadline">BARKHAM, SICHUAN</div>
+			<div id="barkham_xprofiles">
+		
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('lobsanglobzin_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/lobsanglobzin.jpg">
+				<name>[ Lobsang Lobzin ]</name>
+				<br>
+				<date>17 July 2012</date>
+				</a>
+    			<div id="lobsanglobzin_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('lobsanglobzin_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Lobsang Lobzin ]</name>
+  		  		<br>
+  		  		<date>17 July 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>The 18-year-old monk Lobsang Lobzin self-immolated inside the Tsodun Kirti Monastery north of Barkham county. After he set himself on fire in the monastery's main assembly hall, he attempted to walk towards the township's government office in protest. His body was cremated later that evening.
+  		  		<br>
+  		  		<p>As Chinese forces began to make their way to the monastery, local Tibetans gathered to form a human shield in order to prevent them from proceeding. This shield aims to prevent the forcible removal of monks, which occurred in the Kirti Monastery in Ngaba the previous year.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('tenpadargye_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/choemipalten.jpg">
+				<name>[ Tenpa Dargye & Choemi Palten ]</name>
+				<br>
+				<date>30 March 2012</date>
+				</a>
+    			<div id="tenpadargye_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('tenpadargye_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Tenpa Dargye & Choemi Palten ]</name>
+  		  		<br>
+  		  		<date>30 March 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>22-year-old Tenpa Dargye and 21-year-old Choemi Palten (pictured) committed joint suicide in the capital of Barkham County. Both monks have previously studied in Kirti Monastery in Ngaba, where many monks who have self-immolated this year originate from. In the aftermath, 100 monks gathered at the hospital where the young monks were being treated.
+  		  		<br>
+  		  		<p>In 2010, Choemi was detained in Lhasa for carrying a picture of the Dalai Lama, a Tibetan flag, and for having the Tibetan song "Sound of Unity" on his mobile. All of these items are illegal under the Chinese occupation.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+			</div>
+
+			<div id="chamdo_xprofilestop"></div>
+			<div class="cityheadline">CHAMDO, TIBET</div>
+			<div id="chamdo_xprofiles">
+
+ 				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('phagmodhondup_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/phagmodhondup.jpg">
+				<name>[ Phagmo Dhondup ]</name>
+				<br>
+				<date>24 February 2013</date>
+				</a>
+    			<div id="phagmodhondup_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('phagmodhondup_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Phagmo Dhondup ]</name>
+  		  		<br>
+  		  		<date>24 February 2013</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>20-year-old monk Phagmo Dhondup set himself on fire at the Jhakhyung Monastery during a traditional prayer ceremony, where hundreds of people were gathered. He wrote a note to his friend that day:
+  		  		<br>
+  		  		<p><i>"Till now, over a hundred Tibetans in Tibet have set themselves on fire for freedom. They are the true martyrs of Tibet. If Tibet does not get its freedom and independence, China will annihilate Tibetan culture and tradition. This year, Chinese authorities have restricted studying Tibetan language in our Tibetan areas in Bayen and all teachers have been expelled from the region. I am really sad now. Today on the night of the 15th day of the Tibetan New Year, I will set myself on fire in front of the debating grounds at the Jhakhyung Monastery. Today is Tibetan Independence Day."</i>
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+			</div>
+
+
+			<div id="chentsa_xprofilestop"></div>
+			<div class="cityheadline">CHENTSA, QUINGHAI</div>
+			<div id="chentsa_xprofiles">
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('tamdinthar_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/tamdinthar.jpg">
+				<name>[ Tamdin Thar ]</name>
+				<br>
+				<date>15 June 2012</date>
+				</a>
+    			<div id="tamdinthar_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('tamdinthar_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Tamdin Thar ]</name>
+  		  		<br>
+  		  		<date>15 June 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>50-year-old nomad Tamdin Thar set himself on fire outside the Chinese People's Armed Police compound in Markethang, Chentsa. Images posted online by exiled Tibetans show crowds gathering to pile khatags (Tibetan blessing scarves) on his body while massed ranks of armed police gather at the roadside nearby.
+  		  		<br>
+  		  		<p>Armed police were seen extinguishing the flames of Tamdin's body as he laid on the ground. He was taken away in a vehicle by Chinese guards. Local people gathered at the town calling for the return of his body, and the police finally succumbed to their demands by  mid-day.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+			</div>
+
+			<!--<div id="damshung_xprofilestop"></div>
+			<div class="cityheadline">DAMSHUNG, TIBET</div>
+			<div id="damshung_xprofiles">
+			</div>-->
+
+			<div id="darlag_xprofilestop"></div>
+			<div class="cityheadline">DARLAG, QUINGHAI</div>
+			<div id="darlag_xprofiles">
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('sonamwangyal_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/sonamwangyal.jpg">
+				<name>[ Sonam Wangyal ]</name>
+				<br>
+				<date>8 January 2012</date>
+				</a>
+    			<div id="sonamwangyal_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('sonamwangyal_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Sonam Wangyal ]</name>
+  		  		<br>
+  		  		<date>8 January 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>30-year-old Sonam Wangyal, a well-respected lama from the Darlag monastery set himself on fire in Golog. He is the first reincarnate lama to self-immolate since the protests began across Tibet. Before his martyrdom, he recorded a tape that was found in his robe after his death. He says: <i>"I am sacrificing my body to stand in solidarity with [the Tibetan heroes] in flesh and blood... This is not to seek personal fame or glory. I am giving away my body as an offering of light to chase away the darkness, to free all beings from suffering... I am sacrificing my body with firm conviction and a pure heart just as the Buddha bravely gave his body to a hungry tigress to stop her from eating her cubs."</i>
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+			</div>
+
+			<div id="dokarmo_xprofilestop"></div>
+			<div class="cityheadline">DOKARMO, QUINGHAI</div>
+			<div id="dokarmo_xprofiles">
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('wangchenkyi_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/wangchenkyi.jpg">
+				<name>[ Wangchen Kyi ]</name>
+				<br>
+				<date>9 December 2012</date>
+				</a>
+    			<div id="wangchenkyi_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('wangchenkyi_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Wangchen Kyi ]</name>
+  		  		<br>
+  		  		<date>9 December 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>17-year-old Tibetan martyr Wangchen Kyi set herself on fire in the Dokarmo nomadic area of Tsekhong. Before she set herself on fire, she said she wanted to burn herself in an uncharted area so that her parents, rather than the Chinese authorities, could take away her body.
+  		  		<br>
+  		  		<p>Maria Otero, the U.S. State Department's Special Coordinator for Tibetan Issues, said Washington is "deeply concerned and saddened" by the frequency of Tibetan self-immolations. But these comments condemning Tibetan martyrdom are hypocritical in comparison to America's imperial wars in Palestine, Iraq, and other colonized states.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('sangyedolma_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/sangyedolma.jpg">
+				<name>[ Sangye Dolma ]</name>
+				<br>
+				<date>29 November 2012</date>
+				</a>
+    			<div id="sangyedolma_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('sangyedolma_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Sangye Dolma ]</name>
+  		  		<br>
+  		  		<date>29 November 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>17-year-old nun Sangye Dolma set fire to herself in Dokarmo Township. Local villagers and monks gathered the following morning for her cremation. In her photo, "Tibet is an independent country" is written on her hand.
+  		  		<br>
+  		  		<p>She wrote a suicide note and left it in an envelope prior to her self-immolation. It states: <i>"There is a photo of mine in the memory card. Here is the will for the photo. Sons and daughters of Tibet, the darlings of snow lion, the brave sons of Tibet, remember you are Tibetan. My name is Sangye Dolma - sixteen years old by Solar calendar, seventeen years old by Tibetan calendar</i>."
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+
+			</div>
+
+			<div id="dzamthang_xprofilestop"></div>
+			<div class="cityheadline">DZAMTHANG, SICHUAN</div>
+			<div id="dzamthang_xprofiles">
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('rechok_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/rechok.jpg">
+				<name>[ Rechok ]</name>
+				<br>
+				<date>30 May 2012</date>
+				</a>
+    			<div id="rechok_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('rechok_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Rechok ]</name>
+  		  		<br>
+  		  		<date>30 May 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>The 30-year-old nomadic Tibetan woman named Rechok set fire to herself in front of Jonang Dzamthang Monastery, Barma. She died at the scene and her body was held in the monastery as many Tibetans gathered for her cremation. This self-immolation comes only three days after two Tibetans committed martyrdom in Tibet's capital, hundreds of miles away.
+  		  		<br>
+  		  		<p>Rechok spent her last days in the mountains tending to her family's animals and then travelled to the town, prepared to give her life. She is the fourth of young lay people who have set themselves on fire in Barma in 2012 in protest of the occupation of Tibet.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('choephakkyap_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/choephakkyap.jpg">
+				<name>[ Choephak Kyap & Sonam ]</name>
+				<br>
+				<date>19 April 2012</date>
+				</a>
+    			<div id="choephakkyap_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('choephakkyap_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Choephak Kyap & Sonam ]</name>
+  		  		<br>
+  		  		<date>19 April 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>24-year-old Sonam and 25-year-old Choephak Kyap were cousins who committed a twin self-immolation in front of the Jonang Dzamthang Monastery. Both men died and were ordered by authorities to cremate their bodies at 1 a.m. local time. Several thousand Tibetans gathered at their cremation site. A voice recording was found two days after their death. They said their actions were not for personal glory, but instead for <i>"the freedom of Tibet, for the development of Buddhism, and so sentient beings can prosper, and for world peace."</i> In addition, they said: <i>"We, the Tibetan people, suffer without our human rights. The suffering Tibetan people experience due to the denial of our freedom is much greater than the suffering of setting my body on fire."</i>
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('nangdrol_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/nangdrol.jpg">
+				<name>[ Nangdrol ]</name>
+				<br>
+				<date>19 February 2012</date>
+				</a>
+    			<div id="nangdrol_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('nangdrol_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Nangdrol ]</name>
+  		  		<br>
+  		  		<date>19 February 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>18-year-old Nandrol set himself on fire while shouting "May His Holiness the Dalai Lama live 10,000 years!" and "Freedom for Tibet!" according to Tibetan monks now in exile in India. After Nangdrol's protest, local Tibetans took his body to the monastery where Buddhist rituals were carried out. In a handwritten note he left behind, he said: <i>"Head raised high with national pride and courage, I will give my life to fire."</i>
+  		  		<br>
+  		  		<p>On the evening of his death, 1000 people gathered to hold vigil. His suicide took place in the same township where Chinese forces killed a young Tibetan man named Urgen in January. The people of the town report living under extreme restrictions.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+			</div>
+			
+			<div id="dzatoe_xprofilestop"></div>
+			<div class="cityheadline">DZATOE, QUINGHAI</div>
+			<div id="dzatoe_xprofiles">
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('nyawang_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/ngawangnorphal.jpg">
+				<name>[ Nyawang Norpal & Tenzin Kaldrup ]</name>
+				<br>
+				<date>20 June 2012</date>
+				</a>
+    			<div id="nyawang_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('nyawang_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Nyawang Norpal & Tenzin Kaldrup ]</name>
+  		  		<br>
+  		  		<date>20 June 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>22-year-old Nyawang Norpal (pictured) and 24-year-old Tenzin Kaldrup torched themselves while carrying Tibetan flags and shouting for independence from the Chinese state. Tenzin died on the scene, and Nyawang survived. Both were taken to the Zilkar Monastery, where they were treated for their injuries.
+  		  		<br>
+  		  		<p>In a video, the burned Nyawang speaks to a monk from the monastery. He says: <i>"[I set myself on fire] for the sake of Tibet... If we don't have our freedom, cultural traditions, and language, it would be extremely embarrassing for us... There is no hope of my recovery. I have only one wish in  my heart. I just wish to raise the prestige of my people."</i>
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+			
+
+			</div>
+
+			<div id="golok_xprofilestop"></div>
+			<div class="cityheadline">GOLOK, QUINGHAI</div>			
+			<div id="golok_xprofiles">
+
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('lobsanggendun_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/lobsanggedun.jpg">
+				<name>[ Lobsang Gendun ]</name>
+				<br>
+				<date>3 December 2012</date>
+				</a>
+    			<div id="lobsanggendun_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('lobsanggendun_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Lobsang Gendun ]</name>
+  		  		<br>
+  		  		<date>3 December 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>29-year-old Tibetan monk Lobsang Gendun set himself ablaze near the eight-petal lotus monument made of mud in Pema, Golk in protest against Beijing's rule. He walked 300 steps with his hands folded in prayer before dying. Chinese police arrived at the scene and attempted to take his body away, but local Tibetans managed to take the body back and bring it to the Penak monastery.
+  		  		<br>
+  		  		<p>The Tibetan government in-exile in India, the Central Tibetan Administration, said the self-immolations underscore "political repression, economic marginalization, environment destruction, and cultural assimilation" in Tibet.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+			</div>
+
+			<!--<div id="haidong_xprofilestop"></div>
+			<div class="cityheadline">HAIDONG, QUINGHAI</div>
+			<div id="haidong_xprofiles">
+			</div>-->
+
+			<div id="kardze_xprofilestop"></div>
+			<div class="cityheadline">KARDZE, SICHUAN</div>
+			<div id="kardze_xprofiles">
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('yeshikhando_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/yeshikhando.jpg">
+				<name>[ Yeshi Khando ]</name>
+				<br>
+				<date>8 April 2015</date>
+				</a>
+    			<div id="yeshikhando_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('yeshikhando_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Yeshi Khando ]</name>
+  		  		<br>
+  		  		<date>8 April 2015</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>47-year-old nun Yeshi Khando set herself on fire in protest to the Chinese repression in the Himalayan Buddhist region. She committed ritual suicide at the Kardze Monastery after circling the area several times and praying to a sacred object. Yeshi Khando was a nun at the Chokri Ngagong nunnery in Kardze. She called for the return of the Dalai Lama, his long life, and for the freedom of Tibet. Her protest took place close to Kardze's prison and police station. Police arrived immediately and carried her body away in a vehicle, refusing to give custody of it to her relatives.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('tinleynamgyal_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/tinleynamgyal.jpg">
+				<name>[ Tinley Namgyal ]</name>
+				<br>
+				<date>15 April 2014</date>
+				</a>
+    			<div id="tinleynamgyal_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('tinleynamgyal_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Tinley Namgyal ]</name>
+  		  		<br>
+  		  		<date>15 April 2014</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>32-year-old Tinley Namgyal from Ganup Riyong Village in Dawu County set himself on fire near Khenap Village. His suicide triggered a "security alert" and a clampdown on information flow. Tibetans who witnessed the protest immediately took his body to the nearby Gongthel monastery for prayers before the Chinese police could arrive at the scene.
+  		  		<br>
+  		  		<p>Chinese authorities have tightened controls in order to suppress these fiery protests. They are known to arrest and jail Tibetans who they accuse of being linked to these burnings, with some sentences as long as 15 years.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('dolma_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/dolma.jpg">
+				<name>[ Dolma ]</name>
+				<br>
+				<date>29 March 2014</date>
+				</a>
+    			<div id="dolma_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('dolma_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Dolma ]</name>
+  		  		<br>
+  		  		<date>29 March 2014</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>31-year-old nun Dolma set herself on fire near the Bhachoede monastery after going into a retreat at the Rethod monastery a few months before her martyrdom. Chinese have arrested three nuns from this same monastery, whose whereabouts remain unknown. At this time, Chinese president Xi Jinping was visiting Europe with no mention of Tibet from his hosts.
+  		  		<br>
+  		  		<p>Dolma belonged to the well-known Thonglaka Tsang family in Bathang, with three rinpoches (senior religious figures) in the family. This family is known for their involvement in fighting against the Chinese invasion in the 1950s. Various family members have been either killed or imprisoned, including Dolma's father.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('kalsangwangdu_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/kalsangwangdu.jpg">
+				<name>[ Kalsang Wangdu ]</name>
+				<br>
+				<date>29 February 2016</date>
+				</a>
+    			<div id="kalsangwangdu_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('kalsangwangdu_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Kalsang Wangdu ]</name>
+  		  		<br>
+  		  		<date>29 February 2016</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>18-year-old Kalsang Wangdu, a monk from the Retsokha Aryaling monastery in Kardze, set himself on fire in southwestern China's Sichuan province. Radio Free Asia reports: "[While he burned], he called out for Tibet's complete independence." There are also media reports that "He raised slogans calling for Tibet's complete independence." A candle-lit vigil was held in McLeod Ganj, attended by hundreds of Tibetans and supporters. Radio Free Asia has reported that Wangdu's family are being pressured by local authorities to say he died in a house fire.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+			</div>
+
+			<div id="kyegudo_xprofilestop"></div>
+			<div class="cityheadline">KYEGUDO, QUINGHAI</div>
+			<div id="kyegudo_xprofiles">
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('sonamtopgyal_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/sonamtopgyal.jpg">
+				<name>[ Sonam Topgyal ]</name>
+				<br>
+				<date>10 July 2015</date>
+				</a>
+    			<div id="sonamtopgyal_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('sonamtopgyal_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Sonam Topgyal ]</name>
+  		  		<br>
+  		  		<date>10 July 2015</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>26-year-old monk Sonam Topgyal self-immolated in the center of a city rebuilt by the Chinese authorities after being imprisoned and having his family home demolished. He wrote a suicide note in his prayer book saying that his death be viewed as a sacrifice in "witness to the truth." He said: <i>"The main aspiration of the people is for Gyalwa Tenzin Gyatso [His Holiness the Dalai Lama] to be able to return to the Potala Palace. Since we do not have freedom to voice the truth about our conditions, I had to sacrifice my life to be a witness of truth to the world in general and specifically to the Chinese government and people."</i>
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+			</div>
+
+			<div id="labrang_xprofilestop"></div>
+			<div class="cityheadline">LABRANG, QUINGHAI</div>
+			<div id="labrang_xprofiles">
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('namlhatsering_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/NamlhaTsering.jpg">
+				<name>[ Namlha Tsering ]</name>
+				<br>
+				<date>17 February 2013</date>
+				</a>
+    			<div id="namlhatsering_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('namlhatsering_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Namlha Tsering ]</name>
+  		  		<br>
+  		  		<date>17 February 2013</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>49-year-old Tibetan martyr Namlha Tsering, also known as Hoba, set himself on fire in the middle of a busy street in the Tibetan area of Amdo. Images received from Tibet depict a man sitting cross-legged in the middle of the street as towering flames rage while vehicles cars pass by.
+  		  		<br>
+  		  		<p>Chinese police and paramilitary personnel immediately arrived at the scene, doused the flames and bundled his body away. Later photos show Chinese military forces surrounding the area where he had lain, ashes clearly visible on the ground.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('konchokkyab_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/konchokkyab.jpg">
+				<name>[ Konchok Kyab ]</name>
+				<br>
+				<date>22 January 2013</date>
+				</a>
+    			<div id="konchokkyab_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('konchokkyab_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Konchok Kyab ]</name>
+  		  		<br>
+  		  		<date>22 January 2013</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>23-year-old Kunchok Kyab set fire to himself near the Bora Monastery in Labrang. He passed away in his fiery protest and the Chinese authorities whisked away his body to an undisclosed location.
+  		  		<br>
+  		  		<p>A heavy security has been deployed at the area following the self-immolation. Scores of monks from Bora monastery has also been detained by Chinese security officials. Despite the Central Tibetan Administration's consistent appeal to Tibetans not to self-immolate, over 99 Tibetans have set themselves on fire calling for the return of His Holiness the Dalai Lama to Tibet and freedom for Tibetans.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('dorjeerinchen_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/dorjeerinchen.jpg">
+				<name>[ Dorjee Rinchen ]</name>
+				<br>
+				<date>22 October 2012</date>
+				</a>
+    			<div id="dorjeerinchen_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('dorjeerinchen_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Dorjee Rinchen ]</name>
+  		  		<br>
+  		  		<date>22 October 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>58-year-old Dorjee Rinchen set himself alight in front of the Armed Forces Department at the Woeden market. He is the second man to set himself on fire in Labrang on this day. Local people did not allow his body to be taken away by the troops, and instead transported it to his village, Sayi. Monks from Labrang were barred from going to his home to pray.
+  		  		<br>
+  		  		<p>Police in the region offered money for knowledge about planned self-immolations to stem the tide of ritual suicides. In the past week, four people have committed suicide by flame in Xiahe, Gansu.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('dhondup_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/dhondup.jpg">
+				<name>[ Dhondup ]</name>
+				<br>
+				<date>22 October 2012</date>
+				</a>
+    			<div id="dhondup_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('dhondup_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Dhondup ]</name>
+  		  		<br>
+  		  		<date>22 October 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>60-year-old Dhondup self-immolated at the side of at a temple called Serkhang in Labrang Tashikyil Monastery in Kanlho, Gansu. Images of his burning body reached Tibetans in exile near the pilgrimate circuit of the monastery, and one photograph shows a khatag (white blessing scarf) placed at where his body laid.
+  		  		<br>
+  		  		<p>A Tibetan in exile from Labrang said: <i>"We heard that the flames surrounding the body were so intense. Troops arrived soon afterwards and put the remains in a large bag and took it away. Local monks then tried to hold prayers for Dhondup but police and monastic officials tried to prevent this happening."</i>
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+
+			</div>
+
+				<div id="lhasa_xprofilestop"></div>
+				<div class="cityheadline">LHASA, TIBET</div>
+				<div id="lhasa_xprofiles">
+
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('dorjetseten_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/dorjetseten.jpg">
+				<name>[ Dorje Tseten & Dargye ]</name>
+				<br>
+				<date>27 May 2012</date>
+				</a>
+    			<div id="dorjetseten_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('dorjetseten_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Dorje Tseten & Dargye ]</name>
+  		  		<br>
+  		  		<date>27 May 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>19-year-old Dorje Tseten and 25-year-old Dargye set their bodies on fire outside of Jokhang Temple, regarded to be one of Tibet's holiest shrines. This is the first self-immolation in Lhasa, Tibet's historic capital. Their martyrdom took place during Saga Dawa, an important religious period for Tibetan Buddhists that commemorates the Buddha's birth, enlightenment, and death.
+  		  		<br>
+  		  		<p>The self-immolations are the first in Lhasa, where Chinese security has been tight since March 2008, when protests occurred across Tibet and rocked the capital city. The media reported today that Lhasa’s Public Security Bureau has set up a special task force to investigate the case.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+			</div>
+
+			<div id="luchu_xprofilestop"></div>
+			<div class="cityheadline">LUCHU, GANSU</div>
+			<div id="luchu_xprofiles">
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('tsesungkyab_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/tsesungkyab.jpg">
+				<name>[ Tsesung Kyab ]</name>
+				<br>
+				<date>25 February 2013</date>
+				</a>
+    			<div id="tsesungkyab_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('tsesungkyab_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Tsetung Kyab ]</name>
+  		  		<br>
+  		  		<date>25 February 2013</date></center>
+  		  		<br>
+  		  		<quote>
+  		 		<p>27-year-old monk Tsesung Kyab set fire to himself in front of the main temple of Shitsang Gonsar Monastery. At the time, many Tibetans had congregated at the monastery for a special prayer ceremony and ritual during which monks carry the Buddha's statue while circling the monastery. Tibetans struggled with Chinese security personnel who attempted to extinguish the flames and remove Tsesung's body. The bystanders were able to take his body to his home in Choekhor village for prayers and the cremation ceremony. Several hundred Chinese armed police arrived at the monastery and imposed restrictions in the area. It is believed that Tsesung Kyab is a cousin of Pema Dorjee, who set himself on fire and died at the same location in December 2012.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('pemadorjee_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/pemadorjee.jpg">
+				<name>[ Pema Dorjee ]</name>
+				<br>
+				<date>8 December 2012</date>
+				</a>
+    			<div id="pemadorjee_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('pemadorjee_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Pema Dorjee ]</name>
+  		  		<br>
+  		  		<date>8 December 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>23-year-old Tibetan monk Pema Dorjee committed ritual suicide by setting fire to himself in front of the Shetsang Monastery in Luchu County. This day on the lunar calendar is observed as Gaden Ngamchoe, the day of Je Tsongkhapa's Parinirvana. Tibetans observe this day by offering lamps in monasteries, temples, and stupas to venerate the mortal departure of Lama Tsongkhapa, a great 14th century Tibetan Buddhist master. Sikyong Dr Sangay, the elected head of the Tibetan people, urged Tibetans and supporters to <i>"light a candle or lamp, observe a minute's silence, and a say a prayer for all those who have died for the cause of Tibet, and locally organise vigils and rallies."</i>
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('tamdinkyab_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/tamdinkyab.jpg">
+				<name>[ Tamdin Kyab ]</name>
+				<br>
+				<date>23 November 2012</date>
+				</a>
+    			<div id="tamdinkyab_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('tamdinkyab_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Tamdin Kyab ]</name>
+  		  		<br>
+  		  		<date>23 November 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>23-year-old Tibetan monk Tamdin Kyab died after setting fire to himself last night. His body was found by the Luchu River in Phalgar Village. There were no witnesses to his self-immolation. Local Tibetans recovered his charred body and carried it home.
+  		  		<br>
+  		  		Sources say that Tamdin often said that he wished he could sacrifice his life whenever he heard of self-immolation protests, and also that, without the return of the Dalai Lama to Tibet, <i>"there is no difference between living and dying in this world."</i>
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+			</div>
+
+			<div class="machu_xprofilestop"></div>
+			<div class="cityheadline">MACHU, GANSU</div>
+			<div id="machu_xprofiles">
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('dawatsering_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/tseringkyi.jpg">
+				<name>[ Tsering Kyi ]</name>
+				<br>
+				<date>3 March 2012</date>
+				</a>
+    			<div id="dawatsering_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('dawatsering_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Tsering Kyi ]</name>
+  		  		<br>
+  		  		<date>3 March 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>20-year-old student Tsering Kyi set her body on fire in a vegetable market in Machu county. The senior in middle school was last at her family home days before when she said: <i>"In Ngaba and other areas of Tibet, Tibetans are burning themselves. We should do something for Tibet - life is meaningless if we don't do something for Tibet."</i>
+  		  		<br>
+  		  		<p>Tsering entered a public toilet, took of her traditional Tibetan overdress, and doused herself in petrol. She then walked into the market, ignited the fuel, and became the 23rd Tibetan martyr that year. Eyewitness reports say that she raised her hand above her head to form a fist several times while in flames.</i>
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+			</div>
+
+			<!--<div id="nagchu_xprofilestop"></div>
+			<div class="cityheadline">NAGCHU, TIBET</div>
+			<div id="nagchu_xprofiles">
+			</div>-->
+
+				<div id="ngaba_xprofilestop"></div>
+				<div class="cityheadline">NGABA, SICHUAN</div>
+				<div id="ngaba_xprofiles">
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('rinchen2_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/rinchen2.jpg">
+				<name>[ Rinchen & Sonam Dargye ]</name>
+				<br>
+				<date>20 February 2013</date>
+				</a>
+    			<div id="rinchen2_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('rinchen2_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Rinchen & Sonam Dargye ]</name>
+  		  		<br>
+  		  		<date>20 February 2013</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>17-year-old Rinchen (pictured) and 18-year-old Sonam Dargye set themselves on fire in protest of Beijing's imperial rule in Dzorge, Ngaba. 
+  		  		<br>
+  		  		<p>Tibetans are so distressed by the sentencing of Tibetans to long prison terms by the authorities in their drive to criminalize self-immolation that they have warned self-immolations may continue "for a long time."
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('lobsangnamgyal_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/lobsangnamgyal.jpg">
+				<name>[ Lobsang Namgyal ]</name>
+				<br>
+				<date>3 February 2013</date>
+				</a>
+    			<div id="lobsangnamgyal_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('lobsangnamgyal_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Lobsang Namgyal ]</name>
+  		  		<br>
+  		  		<date>3 February 2013</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>37-year-old Tibetan monk Lobsang Namygal self-immolated near the local police building in Dzoge. While engulfed in flames, Lobsang shouted for the long life of His Holiness the Dalai Lama as he ran towards the Public Security Bureau headquarters. The Chinese military removed his body and cremated his body without informing the family members, only handing them his ashes.
+  		  		<br>
+  		  		<p>The Chinese police confiscated a suicide letter left inside a bag near the protest site. In September 2012, Lobsang Namgyal had gone missing for two weeks. A search by his family and friends later revealed that Chinese security personnel had detained him for no reason.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('kunchokphelgay_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/kunchokphelgay.jpg">
+				<name>[ Konchok Phelgay ]</name>
+				<br>
+				<date>8 December 2012</date>
+				</a>
+    			<div id="kunchokphelgay_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('kunchokphelgay_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Konchok Phelgay ]</name>
+  		  		<br>
+  		  		<date>8 December 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>23-year-old Tibetan martyr Kunchok Phelgay set fire to himself in front of the Tragtsang Lhamo Kirti Monastery's assembly hall in Ngaba, just hours after Pema Dorjee's self-immolation in Luchu. His body was carried to the monastery where monks are offering prayers.
+  		  		<br>
+  		  		<p>Kunchok Phelgye was enveloped in flames and his hands were joined in prayers as he raised slogans for the long life and return of His Holiness the Dalai Lama and Kyabje Kirti Rinpoche, the exiled head of Kirti Monastery. He also raised slogans calling for the return and reunification of Tibetans.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('kunchokkyab_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/kunchokkyab.jpg">
+				<name>[ Konchok Kyab ]</name>
+				<br>
+				<date>30 November 2012</date>
+				</a>
+    			<div id="kunchokkyab_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('kunchokkyab_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Konchok Kyab ]</name>
+  		  		<br>
+  		  		<date>30 November 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>29-year-old Konchok Kyab carried out his fiery protest near a gas station in Sagdom, Dzoege in Ngaba. Chinese forces immediately whisked him away. The following day the Chinese authorities returned "his ashes" to his family.
+  		  		<br>
+  		  		<p>Monks and laymen gathered to offer prayers and respect for his martyrdom - defying a ban on such rituals by the Chinese authorities. A group of yung Tibetans who followed the Chinese police vehicles that removed Kunchok have gone missing. Konchok Kyab has two children, a nine-year-old and a six-year-old.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('samdupdorjee_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/Dorjeesamdup.jpg">
+				<name>[ Samdup & Dorjee Kyab ]</name>
+				<br>
+				<date>7 November 2012</date>
+				</a>
+    			<div id="samdupdorjee_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('samdupdorjee_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Samdup & Dorjee Kyab ]</name>
+  		  		<br>
+  		  		<date>7 November 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>15-year-old Dorjee Kyab (pictured) and 16-year-old Samdup are the youngest martyr monks to stage a self-immolation protest in Tibet. They burned themselves alive as they shouted for the return of the Dalai Lama and freedom for Tibet in front of the Public Security Bureau office in Gomang.
+  		  		<br>
+  		  		<p>The Chinese authorities have banned monks from the Ngoshul Monastery from offering condolences and joining prayer rituals to observe their deaths. Sources have reported extreme secrecy regarding the whereabouts and conditions of both monks as they were taken into police custody.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('lobsangtsultrim_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/lobsangtsultrim.jpg">
+				<name>[ Lobsang Tsultrim ]</name>
+				<br>
+				<date>16 March 2012</date>
+				</a>
+    			<div id="lobsangtsultrim_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('lobsangtsultrim_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Lobsang Tsultrim ]</name>
+  		  		<br>
+  		  		<date>16 March 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>20-year-old Lobsang Tsultrim set his body on fire on the first anniversary of Phuntsok's suicide, a fellow monk from the Kirti monastery. After igniting himself, he marched along the main road in the upper part of Ngaba Town and shouted protests against the Chinese government while subverting armed police. He was seen with his fist raised in the air even as the guards pinned him to the floor of a moving vehicle.
+  		  		<br>
+  		  		<p>Local Chinese authorities denied Lobsang's family permission to perform his last rites, and they cremated him the same day. Only a portion of his ashes were handed over to his family. Norbu Damdul, monk who self-immolated in October 2011, was his cousin.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('rinchen_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/rinchen.jpg">
+				<name>[ Rinchen ]</name>
+				<br>
+				<date>4 March 2012</date>
+				</a>
+    			<div id="rinchen_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('rinchen_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Rinchen ]</name>
+  		  		<br>
+  		  		<date>4 March 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>30-year-old Rinchen set herself on fire near a military camp near the Kirti monastery in Ngaba. While in flames, Rinchen called out: <i>"Tibet needs Freedom and Gyalwa Rinpochen (the Dalai Lama) needs to return to Tibet!"</i> Local Tibetans have taken her body into the sanctuary of the monastery.
+  		  		<br>
+  		  		<p>Her actions come in light of policies to assimilate Tibet into 'One China,' which have been an utter failure. Tibetans have called for independence and free from colonial rule. China's response to these protests have been to intensify repression and surveillance.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('tenzinchoedon_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/tenzinchoedon.jpg">
+				<name>[ Tenzin Choedon ]</name>
+				<br>
+				<date>12 February 2012</date>
+				</a>
+    			<div id="tenzinchoedon_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('tenzinchoedon_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Tenzin Choedon ]</name>
+  		  		<br>
+  		  		<date>12 February 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>18-year-old Tenzin Choedon self-immolated in the same location as the nun Tenzin Wangmo: the Sumdo Bridge underneath their nunnery. The state police immediately captured her and drove her towards Barkham. She died on her way to the hospital. Tenzin's father had been told that her body would not be handed back to the family for the last rites.
+  		  		<br>
+  		  		<p>In the wake of this second self-immolation by a nun in the vicinity of Ngaba town, Chinese armed forces surrounded their nunnery, Mamae Dechen Choekhorling, and sealed it off. Her protest took place just days after the Chinese leader of the Tibetan Region told Communist party members to prepare for "a war against secessionist sabotage."
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('lobsangjamyang_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/lobsangjamyang.jpg">
+				<name>[ Lobsang Jamyang ]</name>
+				<br>
+				<date>14 January 2012</date>
+				</a>
+    			<div id="lobsangjamyang_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('lobsangjamyang_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Lobsang Jamyang ]</name>
+  		  		<br>
+  		  		<date>14 January 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>20-year-old Lobsang Jamyang doused himself in petrol and set himself on fire in Ngaba Town. He walked into the street calling for the long life of the Dalai Lama and the freedom of Tibet. Police kicked and beat Lobsang with spiked clubs and then began putting out the flames.
+  		  		<br>
+  		  		<p>Local Tibetans on the scene stood up to the armed guards, without regard to their own lives, and shouted that the body be handed over to them. They tried to block the police's path as they tried to take the body away. An eyewitness said that they were shot and then "a strong gas" was used on the crowd, with "many falling on the ground." Multiple people were detained in the aftermath.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('pawotenyi_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/pawotsultrim.jpg">
+				<name>[ Pawo Ten-nyi & Tsultrim ]</name>
+				<br>
+				<date>6 January 2012</date>
+				</a>
+    			<div id="pawotenyi_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('pawotenyi_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Pawo Ten-nyi & Tsultrim ]</name>
+  		  		<br>
+  		  		<date>6 January 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>20-year-olds Pawo Tsultrim (pictured) and Pawo Ten-nyi both set themselves on fire in Ngaba Town, the 13th and 14th acts of martyrdom against Chinese oppression since March of last year. These are the first acts of 2012. Pawo Tsultrim's final words were <i>"...we have no saviors or protectors. Brothers of the snow land unite for Tibet."</i>
+  		  		<br>
+  		  		<p>A series of protests have taken place over Tibet, underlining a broad rejection of China's 60-year-old occupation and widespread abuse of Tibetan bodies, including routine and widespread torture and surveillance.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('dawatsering_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/dawatsering.jpg">
+				<name>[ Dawa Tsering ]</name>
+				<br>
+				<date>25 October 2011</date>
+				</a>
+    			<div id="dawatsering_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('dawatsering_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Dawa Tsering ]</name>
+  		  		<br>
+  		  		<date>25 October 2011</date></center>
+  		  		<br>
+  		  		<quote
+  		  		<p>38-year-old Dawa Tsering from the Kandze Monastery poured kerosene on his body and set himself alight during a masked Cham dance festival, attended by hundreds of local people. He shouted for the return of His Holiness the Dalai Lama and the freedom of Tibet. The Chinese police doused his body, but he resisted medical attention.
+  		  		<br>
+  		  		<p>The monks from his monastery prevented Dawa from being taken away and interrogated by the large numbers of Chinese police. They have been stationed at the monastery since the nation-wide protests since 2008.  
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('tenzinwangmo_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/tenzinwangmo.jpg">
+				<name>[ Tenzin Wangmo ]</name>
+				<br>
+				<date>17 October 2011</date>
+				</a>
+    			<div id="tenzinwangmo_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('tenzinwangmo_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Tenzin Wangmo ]</name>
+  		  		<br>
+  		  		<date>17 October 2011</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>20-year-old Tenzin Wangmo is the first Tibetan nun to commit martyrdom. She set herself on fire outside of Dechen Chokorling nunnery, close to Ngaba Town. She told fellow nuns that she <i>"will have to do something of great importance"</i> that morning.
+  		  		<br>
+  		  		<p>Tenzin called for religious freedom in Tibet, the end of the occupation, and the return of the Dalai Lama. She walked for eight minutes, her body in flames, before she passed away. She is one of 40 monks who have set themselves on fire in protest of the state to this date.</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('kalsangwangchuk_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/kalsangwangchuk.jpg">
+				<name>[ Kalsang Wangchuk ]</name>
+				<br>
+				<date>3 October 2011</date>
+				</a>
+    			<div id="kalsangwangchuk_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('kalsangwangchuk_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Kalsang Wangchuk ]</name>
+  		  		<br>
+  		  		<date>3 October 2011</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>17-year-old Kalsang Wangchuk carried a photo of the Dalai Lama as he ignited himself near the vegetable market in Ngaba County's main street. The Chinese police first extinguished the fire and then beat Kalsang with an iron rod before dragging his body away to an unknown location. He was held at the county hospital under close surveillance.
+  		  		<br>
+  		  		<p>A Tibetan woman picked up the picture of the Dalai Lama, which fell from Kalsang's hand as he burned, but some men on motorcycles confiscated it from her. A few days after this protest, flyers were distributed by the Kirti Monastery saying that <i>"...many more people are prepared to give up their lives"</i> in protest.</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('choepelkhayang_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/Choepel.jpg">
+				<name>[ Choepel & Khayang ]</name>
+				<br>
+				<date>7 October 2011</date>
+				</a>
+    			<div id="choepelkhayang_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('choepelkhayang_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Choepel & Khayang ]</name>
+  		  		<br>
+  		  		<date>7 October 2011</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>19-year-old Choepel (pictured) and 18-year-old Khayang self-immolated on Nongjichang Road in the center of Ngaba Town. Choepel died at the scene and Khayang's condition and whereabouts are unknown. They are both monks from the Kirti Monastery. Khayang's uncle, Tashi, is one of 20 people shot in the 2008 crackdown by Chinese forces.
+  		  		<br>
+  		  		<p>The Karmapa, the head of one of the four schools of Tibetan Buddhism, said of the recent self-immolations: <i>"Monks take a vow that says they are not allowed to end their lives. But on the other hand, these actions are not for an individual, they are for a people."</i>
+  		  		</quote>
+  		 		</div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('lobsangkalsangkonchok_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/LobsangKalsangLobsangKonchok.jpg">
+				<name>[ Lobsang Kalsang & Konchok ]</name>
+				<br>
+				<date>26 September 2011</date>
+				</a>
+    			<div id="lobsangkalsangkonchok_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('lobsangkalsangkonchok_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Lobsang Kalsang & Lobsang Konchok ]</name>
+  		  		<br>
+  		  		<date>26 September 2011</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>Lobsang Kalsang and Lobsang Konchok, both 18 years old and from the Kirti Monastery, set themselves on fire. Kelsang is the brother of Phuntsog, the 21-year-old monk who set himself on fire in March. This is the fourth act in the last six months. The state tried to douse the flames and remove them from the scene.
+  		  		<br>
+  		  		<p>Lobsang Kalsang passed away on the scene and Lobsang Konchok is said to be alive but his whereabouts are unknown. Since Phuntsog's suicide, the Chinese police have deployed armed road blocks, random house searches, and the forcible removal of hundreds of monks in Ngaba County.
+  		  			
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('phuntsog_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/Phuntsog.jpg">
+				<name>[ Rigzin Phuntsog ]</name>
+				<br>
+				<date>11 March 2011</date>
+				</a>
+    			<div id="phuntsog_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('phuntsog_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Rigzin Phuntsog ]</name>
+  		  		<br>
+  		  		<date>11 March 2011</date></center>
+  		  		<br>
+  		  		<br>
+  		  		<quote>
+  		  		<p>21-year-old Phuntsog is the first monk to self-immolate in China since 2009. His protest sparked a series of suicides in the following year. By March 2012, more than 30 monks had self-immolated as a protest of Chinese rule in Tibet.
+  		  		<br>
+  		  		<p>In the afternoon of March 11th, Phuntsog from the Kirti monastery set himself on fire in Ngawa County, Sichuan province. After his death, over 1,000 monks sat outside the gates of his monastery in protest against the state. The Chinese government sentenced three monks to prison for helping Phuntsong with his suicide. One of the monks was Phuntsog's uncle.</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				</div>
+
+				<div id="rebkong_xprofilestop"></div>
+				<div class="cityheadline">REBKONG, QUINGHAI</div>
+				<div id="rebkong_xprofiles">
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('lubhumgyal_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/lubumtsering.jpg">
+				<name>[ Lubum Gyal ]</name>
+				<br>
+				<date>22 November 2012</date>
+				</a>
+    			<div id="lubhumgyal_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('lubhumgyal_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Lubum Gyal ]</name>
+  		  		<br>
+  		  		<date>22 November 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>18-year-old Lubum Gyal set himself ablaze in Dowa town, Rebkong. Soon, a large number of Tibetans gathered and rescued his body from falling into the hands of Chinese authorities. Monks from the Dowa Monastery carried out his last rites at a nearby crematorium.
+  		  		<br>
+  		  		<p>The Chinese officials were reportedly implementing the five-point notification issued by the Malho Prefectural office and Malho People's government on November 14 giving stern orders to local officials "to punish self-immolators and their families; even those who had offered condolences and prayers to the bereaved family members and relatives."
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('chakmokyi_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/chokmokyi.jpg">
+				<name>[ Chakmo Kyi ]</name>
+				<br>
+				<date>17 November 2012</date>
+				</a>
+    			<div id="chakmokyi_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('chakmokyi_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Chakmo Kyi ]</name>
+  		  		<br>
+  		  		<date>17 November 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>Thousands of Tibetans gathered in Rongwo, Eastern Tibet following the self-immolation of Chakmo Kyi. She was in her twenties and worked as a taxi driver.Despite the heavy police presence in Rongwo, Chakmo Kyi set herself on fire in a narrow street in the town, possibly to avoid detection.
+  		  		<br>
+  		  		<p>There were at least 20 trucks, each with 20 armed police standing in the back, stationed in intersections throughout the town. Plain clothes police are commonplace, and there are reports of cars, each with about five officials each inside, positioned every 20 paces along most streets in town, monitoring the population.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('tamdintso_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/tamdintso.jpg">
+				<name>[ Tamdin Tso ]</name>
+				<br>
+				<date>7 November 2012</date>
+				</a>
+    			<div id="tamdintso_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('tamdintso_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Tamdin Tso ]</name>
+  		  		<br>
+  		  		<date>7 November 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>23-year-old Tibetan woman Tamdin Tso set herself on fire in her family's winter pasture near the Gemar market in Rebkong. She siphoned petrol from a motorbike, drank it, then doused herself in it. She was the mother of a young boy. Her body was taken back to the family home where several thousand local people gathered to pray.
+  		  		<br>
+  		  		<p>Her protest came after visiting Dowa town and becoming angered by Chinese government propaganda which reiterated the ban on pictures of the Dalai Lama and called on Tibetans to stand up against those calling for separatism.Over  two-thirds of Tibetans who have self-immolated are under 25 and have grown up strictly under Chinese rule.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('dorjeelundup_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/dorjeelhundup.jpg">
+				<name>[ Dorjee Lhundup ]</name>
+				<br>
+				<date>4 November 2012</date>
+				</a>
+    			<div id="dorjeelundup_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('dorjeelundup_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Dorjee Lhundup ]</name>
+  		  		<br>
+  		  		<date>4 November 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>25-year-old Dorjee Lhundup set himself on fire on Taglung South Street, some kilometers west of Rongwo Monastery. His body was taken to Dolma Square and a crowd of thousands of Tibetans converged to pay their respects. His body was cremated immediately to prevent authorities from interfering.
+  		  		<br>
+  		  		<p>The cremation took place at the same site where two other men who self-immolated in Rongwo were cremated earlier in 2012. These revolutionary suicides have sparked the largest protests in Tibet since 2008. Latest reports indicate that Chinese security forces have swamped the streets in Rongwo, placing restrictions on the movement of Tibetans.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('sonamdargye_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/sonamdhargye.jpg">
+				<name>[ Sonam Dargye ]</name>
+				<br>
+				<date>17 March 2012</date>
+				</a>
+    			<div id="sonamdargye_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('sonamdargye_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Sonam Dargye ]</name>
+  		  		<br>
+  		  		<date>17 March 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>40-year-old Sonam Dargye, a close friend of the martyr Jamyang Palden, self-immolated in Rongwo Town only three days after Palden's suicide. Sonam travelled from his village and stayed in a hotel overnight. Upon waking, he washed himself, prayed, and then drank petrol. He walked outside the hotel, set himself on fire and shouted: <i>"Let His Holiness return to Tibet!"</i> while engulfed in flames.
+  		  		<br>
+  		  		<p>Sonam had wound his torso with barbed wires, a tactic that had been earlier used by self-immolating monks to prevent the state from taking away their bodies. Locals carried his body to Dolma Square where 8000 Tibetans paid their respects and marked their protest against the government.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('jamyangpalden_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/jamyangpalden.jpg">
+				<name>[ Jamyang Palden ]</name>
+				<br>
+				<date>14 March 2012</date>
+				</a>
+    			<div id="jamyangpalden_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('jamyangpalden_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Jamyang Palden ]</name>
+  		  		<br>
+  		  		<date>14 March 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>30-year-old Jamyang Palden from the Rongpo Monastery set fire to himself. His is the first self-immolation in Rebkong, and the 28th in Tibet since February 2009. His act took place in Dolma Square, where 500 local people gathered at the scene despite the blockade of Chinese troops. They took away his body to prevent it from falling in the hands of the state.
+  		  		<br>
+  		  		<p>Local Tibetans prayed for him and held up photos of the Dalai Lama at the wake of his death. The monks then returned to the monastery to offer prayers. In the same town, 700 students from local schools protested inside school grounds.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+			</div>
+
+			<div id="sangchu_xprofilestop"></div>
+			<div class="cityheadline">SANGCHU, GANSU</div>
+			<div id="sangchu_xprofiles">
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('tashikyi_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/tashikyi.jpg">
+				<name>[ Tashi Kyi ]</name>
+				<br>
+				<date>28 August 2015</date>
+				</a>
+    			<div id="tashikyi_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('tashikyi_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Tashi Kyi ]</name>
+  		  		<br>
+  		  		<date>28 August 2015</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>Tashi Kyi set herself alight in her home village in Sangchu County. Around dawn, police came to her house in Ngulra village and forcefully took away her body. Tashi Kyi's protest followed the demolition of houses in Ngulra with bulldozers because they did not have valid permits. A number of the house-owners protested, with some physically hanging on to the demolition equipment. Ngulra residents believe Tashi Kyi’s self-immolation was motivated by witnessing the destruction of her village.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('sangaytashi_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/sangaytashi.jpg">
+				<name>[ Sangay Tashi ]</name>
+				<br>
+				<date>29 November 2012</date>
+				</a>
+    			<div id="sangaytashi_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('sangaytashi_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Sangay Tashi ]</name>
+  		  		<br>
+  		  		<date>29 November 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>18-year-old Sangay Tashi set himself on fire in Sangkog town and passed away at the scene. He is the sixth Tibetan to commit a ritual suicide in protest of the state in the last three days. He called for the return of His Holiness the Dalai Lama and the release of all Tibetan political prisoners, including the Panchen Lama.
+  		  		<br>
+  		  		<p>The Panchen Lama vanished from the public eye shortly after being named at aged six. It has been claimed that Gedhun had been taken into protective custody from those that would spirit him into exile and is now held in captivity against the wishes of the Tibetan people, whereas the Chinese government claims that he is living a "normal" private life.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('tsewanggyab_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/tsewanggyab.jpg">
+				<name>[ Tsewang Gyab ]</name>
+				<br>
+				<date>26 October 2012</date>
+				</a>
+    			<div id="tsewanggyab_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('tsewanggyab_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Tsewang Gyab ]</name>
+  		  		<br>
+  		  		<date>26 October 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>23-year-old Tsewang Kyab self-immolated on the main street of Sangkog Township in Sangchu County. He died at the scene. An eye witness reported people on the street encircled him to prevent government forces from taking away his body. Local Tibetans then carried it back to his home in Sertri village.
+  		  		<br>
+  		  		<br>
+  		  		<p>Tsewang Kyab is the second person in Sangchu on this day to demonstrate his fierce rejection of Chinese rule, and the fifth Tibetan this week to die in lone protest against the occupation. The Chinese national newspaper Xinhua reported a differing account of this suicide.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('lhamokyab_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/lhamokyab.jpg">
+				<name>[ Lhamo Kyab ]</name>
+				<br>
+				<date>20 October 2012</date>
+				</a>
+    			<div id="lhamokyab_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('lhamokyab_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Lhamo Kyab ]</name>
+  		  		<br>
+  		  		<date>20 October 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>27-year-old Lhama Kyab, a farmer in Bora Village, set himself on fire, fought off Chinese police officers who attempted to douse his flames, and then ran towards the Bora Monastery. He shouted demands for the return of the Dalai Lama to Tibet. Following his self-immolation, a fight broke out between the guards and the local Tibetans who succeeded in carrying Lhamo Kyab's charred body inside the monastery's prayer hall.
+  		  		<br>
+  		  		<p>Bora Monastery was also the scene of major protests against Chinese rule on 20 March 2012. More than 100 monks marched to government buildings, displaying Tibetan flags and pictures of the Dalai Lama.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+
+			</div>
+
+
+			<div id="tawu_xprofilestop"></div>
+			<div class="cityheadline">TAWU, SICHUAN</div>
+			<div id="tawu_xprofiles">
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('tenzingyatso_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/tenzingyatso.jpg">
+				<name>[ Tenzin Gyatso ]</name>
+				<br>
+				<date>20 May 2015</date>
+				</a>
+    			<div id="tenzingyatso_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('tenzingyatso_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Tenzin Gyatso ]</name>
+  		  		<br>
+  		  		<date>20 May 2015</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>35-year-old Tenzin Gyatso died after setting himself on fire outside of a government building in which "political education" was taking place. The Chinese government is implementing measures to enforce patriotism in Tibet, including educating monks about Chinese nationalism.
+  		  		<br>
+  		  		<p>This self-immolation is also in protest against a massive deployment of security forces in Tawu County, where Tibetans had been planning to celebrate the 80th birthday of His Holiness the Dalai Lama.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('kalsangyeshi_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/kalsangyeshi.jpg">
+				<name>[ Kalsang Yeshi ]</name>
+				<br>
+				<date>23 December 2014</date>
+				</a>
+    			<div id="kalsangyeshi_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('kalsangyeshi_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Kalsang Yeshi ]</name>
+  		  		<br>
+  		  		<date>23 December 2014</date></center>
+  		  		<br>
+  		  		<br>
+  		  		<quote>
+  		  		<p>37-year-old monk Kalsang Yeshi from the Nyitso Monastery gave a fiery protest against the Chinese occupation of Tibet at the Martyr's Pillar at Tsuglakhang, the main temple in McLeod Ganj.
+  		  		<br>
+  		  		<p>The police cremated Kalsang Yeshi's body in an electric crematorium. His family members were forced to throw the remains into a river at gunpoint. 
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('paldenchoetso_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/paldenchoetso.jpg">
+				<name>[ Palden Choetso ]</name>
+				<br>
+				<date>15 August 2011</date>
+				</a>
+    			<div id="paldenchoetso_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('paldenchoetso_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Palden Choetso ]</name>
+  		  		<br>
+  		  		<date>15 August 2011</date></center>
+  		  		<br>
+  		  		<br>
+  		  		<quote>
+  		  		<p>35-year-old Palden Choetso, a Tibetan nun from the Geden Choeling Nunnery, self-immolated in protest of China's rule over Tibet. She was heard shouting <i>"Tibetans will reunite soon"</i> and "long life for His Holiness the Dalai Lama" before setting herself aflame.
+				<br>
+				<p>Palden died at the scene and her body was taken to Nyitso Monastery, the monastery of Tsewang Norbu, the martyr that died on 15 August. The area was under lock-down after the protest, with the closing of a major road in Tawu and the deployment of troops to the nunnery. A candlelight vigil was held in her honor.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('tsewangnorbu_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/TsewangNorbu.jpg">
+				<name>[ Tsewang Norbu ]</name>
+				<br>
+				<date>15 August 2011</date>
+				</a>
+    			<div id="tsewangnorbu_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('tsewangnorbu_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Tsewang Norbu ]</name>
+  		  		<br>
+  		  		<date>15 August 2011</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>29-year-old Tsewang Norbu set himself on fire on the Chume Bridge in the center of Tawu. Norbu drank and sprayed himself with petrol, then said: <i>"We Tibetan people want freedom"</i> and <i>"Let the Dalai Lama return to Tibet."</i> After his death, telephone lines were cut in an effort to stop the news from spreading to the outside world, and the Chinese army surrounded the Nyitso Monastery.
+  		  		<br>
+  		  		<p>The monastery's water and electricity supply has been cut repeatedly since they organized a birthday celebration for the Dalai Lama, despite a ban by the local authorities. Thousands attended this celebration. The state has vowed to track down the ringleaders. Norbu's committed suicide only months after Phuntsog's self-immolation in March.</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+			</div>
+
+				<div id="themchen_xprofilestop"></div>
+				<div class="cityheadline">THEMCHEN, QUINGHAI</div>
+				<div id="themchen_xprofiles">
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('tamchoesangpo_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/tamchoesangpo.jpg">
+				<name>[ Tamchoe Sangpo ]</name>
+				<br>
+				<date>17 February 2012</date>
+				</a>
+    			<div id="tamchoesangpo_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('tamchoesangpo_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Tamchoe Sangpo ]</name>
+  		  		<br>
+  		  		<date>17 February 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>38-year-old Tamchoe Sangpo set himself on fire during a prayer ceremony in Bongthak monastery, where he was a teacher. He was also a member of the Democratic Management Committee, the government-controlled body the authorities rely on to control the monasteries internally. Tamchoe had asked the Chinese police to leave because it is a place for monks and not police officers, but his requests were ignored.
+  		  		<br>
+  		  		<p>After his death, a military checkpoint stationed outside the monastery was used to prevent from entering or leaving. The checkpoint was placed to watch after the monks' daily activities after a patriotic re-education was instated there.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+			</div>
+
+			<!--<div id="tridu_xprofilestop"></div>
+			<div class="cityheadline">TRIDU, QUINGHAI</div>
+			<div id="tridu_xprofiles">-->
+
+
+			</div>
+
+				<div id="tsoe_xprofilestop"></div>
+				<div class="cityheadline">TSOE, GANSU</div>
+				<div id="tsoe_xprofiles">
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('sangyetso_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/sangyetso.jpg">
+				<name>[ Sangye Tso]</name>
+				<br>
+				<date>27 May 2015</date>
+				</a>
+    			<div id="sangyetso_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('sangyetso_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Sangye Tso ]</name>
+  		  		<br>
+  		  		<date>27 May 2015</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>37-year-old Sangye Tso set herself alight at the entrance gate of a government office close to Chubu Shi monastery in Chone County. Afterwards, her nephew Tenzin Sopa was arbitrarily arrested and his whereabouts remain unknown. China's authorities told the monastery that anyone who posts any information related to Sangye Tso's death will face heavy punishment or expulsion. Before self-immolating, Sangye Tso offered incense in front of a photo of the Dalai Lama; text was discovered in Tibetan below the portrait which said, <i>"Long Live His Holiness the Dalai Lama", "Where is His Holiness the Panchen Lama", "Tibet needs Freedom."</i> Local police went to Sangy Tso's home and ordered the family to say that she died of natural causes.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('gonpotsering_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/gonpotsering.jpg">
+				<name>[ Gonpo Tsering]</name>
+				<br>
+				<date>26 November 2012</date>
+				</a>
+    			<div id="gonpotsering_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('gonpotsering_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Gonpo Tsering ]</name>
+  		  		<br>
+  		  		<date>26 November 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>24-year-old Gonpo Tsering set himself ablaze outside a monastery in Eastern Tibet. He was a married father of three. Two weeks prior, he said that he wanted to go to the monastery for a pilgrimage and set out on his motorbike.
+  		  		<br>
+  		  		Before his self-immolation, he called for the freedom of Tibetans, the protection of the Tibetan language, and for the Dalai Lama to be brought back to Tibet. Monks took his body back to his village and prayed for him there.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('sangaygyatso_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/sangaygyatso.jpg">
+				<name>[ Sangay Gyatso]</name>
+				<br>
+				<date>6 October 2012</date>
+				</a>
+    			<div id="sangaygyatso_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('sangaygyatso_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Sangay Gyatso ]</name>
+  		  		<br>
+  		  		<date>6 October 2012</date></center>
+  		  		<br>
+  		  		<br>
+  		  		<quote>
+  		  		<p>27-year-old Tibetan man set himself on fire on the premises of the Dokar monastery compound near Tsoe, the administrative center of northern Gansu. He called for cultural and religious freedom in Tibet and the return of the Dalai Lama before he set himself alight. His death marks the third self-immolation that week.
+  		  		<br>
+  		  		<p>The Dalai Lama expressed concern over the ritual suicides. "Please preserve your lives in the future," he said. Similar expressions of concern over the burnings have gone largely unheeded in the past.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('dolkarkyi_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/dolkarkyi.jpg">
+				<name>[ Dolkar Kyi ]</name>
+				<br>
+				<date>7 August 2012</date>
+				</a>
+    			<div id="dolkarkyi_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('dolkarkyi_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Dolkar Kyi ]</name>
+  		  		<br>
+  		  		<date>7 August 2012</date></center>
+  		  		<br>
+  		  		<br>
+  		  		<quote>
+  		  		<p>26-year-old Dolkar Kyi, who originates from a farming family, torched herself in the afternoon near a white stupa (reliquary building) at Tsoe Gaden Choeling monastery. She called for the return of the Dalai Lama and shouted that there was no freedom in Tibet.
+  		  		<br>
+  		  		<p>After her protest, 15 military trucks were deployed to the monastery, the scene of her act. Three monks were accused of conspiring with her: Choephal, Sherab, and Tsunda. Local Tibetans said they were ready to protest if the three are not released. The authorities have admitted to holding Sherab and Tsundu, but they did not state the whereabouts of Choephal.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+			</div>
+
+			<div id="yadzi_xprofilestop"></div>
+			<div class="cityheadline">YADZI, QUINGHAI</div>
+			<div id="yadzi_xprofiles">
+
+				<div class="martyr_profile">
+				<a href="javascript:void(0)" class="nav-link" onclick = "document.getElementById('wangchennorbu_light').style.display='block';document.getElementById('fade').style.display='block'">
+				<img src="file:///Users/Sehhjun/Desktop/photos/wangchennorbu.jpg">
+				<name>[ Wangchen Norbu ]</name>
+				<br>
+				<date>19 November 2012</date>
+				</a>
+    			<div id="wangchennorbu_light" class="white_content">
+    			<a href = "javascript:void(0)" onclick = "document.getElementById('wangchennorbu_light').style.display='none';document.getElementById('fade').style.display='none'"><div class="close_box"><img src="file:///Users/Sehhjun/Desktop/photos/close.svg"></a></div>
+  		  		<div class="quote_box">
+  		  		<center><name>[ Wangchen Norbu ]</name>
+  		  		<br>
+  		  		<date>19 November 2012</date></center>
+  		  		<br>
+  		  		<quote>
+  		  		<p>26-year-old Dolkar Kyi, who originates from a farming family, torched herself in the afternoon near a white stupa (reliquary building) at Tsoe Gaden Choeling monastery. She called for the return of the Dalai Lama and shouted that there was no freedom in Tibet.
+  		  		<br>
+  		  		<p>After her protest, 15 military trucks were deployed to the monastery, the scene of her act. Three monks were accused of conspiring with her: Choephal, Sherab, and Tsunda. Local Tibetans said they were ready to protest if the three are not released. The authorities have admitted to holding Sherab and Tsundu, but they did not state the whereabouts of Choephal.
+  		  		</quote></div>
+    			</div>
+    			<div id="fade" class="black_overlay"></div>
+				</div>
+
+			</div>
+
+			<div id="sourcesheadline">sources</div>
+			<div id="sources">
+			<small>
+			Burke, Jason, and Tania Branigan. "'Burning Martyrs': The Wave of Tibetan Monks Setting Themselves on Fire." <i>The Guardian.</i> Guardian News and Media, 10 Nov. 2011. Web. 04 Mar. 2016.
+			<br>
+			<br>Choesang, Yeshe. "A Long Struggle for Freedom of Tibet: We Must Remember the Martyrs." <i>The Tibet Post International.</i> 30 Oct. 2014. Web. 03 Mar. 2016.
+  		  	<br>
+  		  	<br>"A Chronology of Tibet's History." <i>Dreams of Tibet.</i> Frontline PBS, 2014. Web. 16 Apr. 2016.
+  		  	<br>
+  		  	<br>Downey, Jack Lee. "Dying They Live: Suicide Protesting and Martyrdom." <i>Journal of Religion and Violence</i> (2015). Web. 12 Apr. 2016.
+  		  	<br>
+  		  	<br>"Harrowing Images and Last Message from Tibet of First Lama to Self-immolate." <i>International Campaign for Tibet.</i> 1 Feb. 2012. Web. 04 Mar. 2016.
+  		  	<br>
+  		  	<br>His Holiness the 14th Dalai Lama. "Glimpses on History of Tibet." <i>Central Tibetan Administration.</i> Web. 19 June 2016.
+  		  	<br>
+  		  	<br>"History of Tibet." <i>Plain Text Histories.</i> History World. Web. 04 May 2016.
+  		  	<br>
+  		  	<br>Newton, Huey P. <i>Revolutionary Suicide.</i> New York: Harcourt Brace Jovanovich, 1973. Print.
+  		  	<br>
+  		  	<br>"Self-Immolation Protests." <i>Free Tibet.</i> FreeTibet.org, n.d. Web. Mar.-Apr. 2016.
+  		  	<br>
+  			<br>"Self-Immolations by Tibetans." <i>International Campaign for Tibet.</i> 10 May 2016. Web. 1 June 2016.
+  		  	<br>
+  		  	<br>Stefanicki, Robert. "Tibetans Divided Over Cult of Martyrs." <i>News and Views from the Global South.</i> Inter Press Agency, 20 May 2014. Web. 10 Mar. 2016.
+  		  	<br>
+  		  	<br>"The Theology of Self-destruction." <i>The Economist.</i> The Economist Newspaper, 22 Mar. 2013. Web. 04 May 2016.
+  		  	<br>
+  		  	<br>Thekaekara, Mari Marcel. "Should Martyrdom Ever Be Glorified?" <i>New Internationalist.</i> 27 Sept. 2013. Web. 22 Mar. 2016.
+  		  	<br>
+  		  	<br>Varma, C.B. "The Story of a Tigress." <i>The Illustrated Jataka and Other Stories of the Buddha.</i> N.p., 2002. Web. 29 Apr. 2016.
+			</small>
+			</div>
+
+			<div class="cityheadline"></div>
+			<div id="endnote">[ angiesijunlou@gmail.com ]</div>
+
+		</div>
+	</body>
+</html>

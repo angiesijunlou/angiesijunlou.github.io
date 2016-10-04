@@ -1,0 +1,596 @@
+#map {
+	width: 100%;
+	height: 717px;
+	margin-bottom: 50px;
+}
+
+#profiles {
+	display: block;
+	width: 100%;
+	overflow: auto;
+	background-color: white;
+
+}
+
+body {
+	margin: 0;
+	background-color: white;
+}
+
+#headline {
+	border-top: 1px solid black;
+	background-color: rgb(236, 230, 255);
+	font-size: 30px;
+	text-align: center;
+	height: 40px;
+	padding-top: 30px;
+	font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", "Adobe Caslon Pro", sans-serif; 
+    font-weight: normal;
+    font-style: normal;
+}
+
+#subheadline {
+	background-color: rgb(236, 230, 255);
+	padding-top: 10px;
+	font-family: "Adobe Caslon Pro", sans-serif; 
+	font-size: 22px;
+	text-align: center;
+	height: 40px;
+	margin-bottom: 50px;
+	border-bottom: 1px solid black;
+}
+
+#quote {
+	padding-top: 20px;
+	padding-bottom: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+	font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", "Adobe Caslon Pro", sans-serif; 
+	font-size: 16px;
+}
+
+.cityheadline {
+	background-color: rgb(236, 230, 255);
+	font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", "Adobe Caslon Pro", sans-serif; 
+	font-size: 25px;
+	text-align: center;
+	width: 100%;
+	height: 33px;
+	border-bottom: 0.5px solid black;
+	border-top: 0.5px solid black;
+	margin-bottom: 20px;
+	padding-top: 10px;
+}
+
+#historyheadline {
+	background-color: rgb(236, 230, 255);
+	font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", "Adobe Caslon Pro", sans-serif; 
+	font-size: 25px;
+	text-align: center;
+	width: 100%;
+	height: 33px;
+	border-bottom: 0.5px solid black;
+	border-top: 0.5px solid black;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	cursor: pointer;
+}
+
+#theoryheadline {
+	background-color: rgb(236, 230, 255);
+	font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", "Adobe Caslon Pro", sans-serif; 
+	font-size: 25px;
+	text-align: center;
+	width: 100%;
+	height: 33px;
+	border-bottom: 0.5px solid black;
+	border-top: 0.5px solid black;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	cursor: pointer;
+}
+
+#sourcesheadline {
+	background-color: rgb(236, 230, 255);
+	font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", "Adobe Caslon Pro", sans-serif; 
+	font-size: 25px;
+	text-align: center;
+	width: 100%;
+	height: 33px;
+	border-bottom: 0.5px solid black;
+	border-top: 0.5px solid black;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	cursor: pointer;
+}
+
+a.back-to-top {
+	display: none;
+	width: 60px;
+	height: 60px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 999;
+	right: 2%;
+	bottom: 2%;
+	background: rgb(236, 230, 255) url("file:///Users/Sehhjun/Desktop/photos/up-arrow.png") no-repeat center 43%;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	border: 1px solid black;
+}
+
+#introduction {
+	border-top: 1px solid black;
+	padding-top: 30px;
+	padding-left: 100px;
+	padding-bottom: 30px;
+	overflow: auto;
+	padding-right: 120px;
+	font-family: "Adobe Caslon Pro", "Times New Roman", serif;
+	column-count: 3;
+	column-width: 30px;
+	column-gap: 80px;
+	word-break: normal;
+}
+
+.firstcharacter {
+	float: left;
+	font-size: 75px;
+	line-height: 50px;
+	padding-top: 16px;
+	padding-right: 8px;
+	padding-left: 0px;
+	font-family: "Adobe Caslon Pro", "Times New Roman", serif;
+}
+
+p {
+	text-indent: 20px;
+	text-align: justify;
+}
+
+#history {
+	padding-top: 20px;
+	padding-left: 100px;
+	padding-bottom: 30px;
+	overflow: auto;
+	padding-right: 120px;
+	font-family: "Adobe Caslon Pro", "Times New Roman", serif;
+	column-count: 3;
+	column-width: 30px;
+	column-gap: 80px;
+	word-break: normal;
+}
+
+#theory {
+	padding-top: 20px;
+	padding-left: 100px;
+	padding-bottom: 30px;
+	overflow: auto;
+	padding-right: 120px;
+	font-family: "Adobe Caslon Pro", "Times New Roman", serif;
+	column-count: 3;
+	column-width: 30px;
+	column-gap: 80px;
+	word-break: normal;
+}
+
+#sources {
+	padding-top: 20px;
+	padding-left: 100px;
+	padding-bottom: 30px;
+	overflow: auto;
+	padding-right: 120px;
+	font-family: "Adobe Caslon Pro", "Times New Roman", serif;
+	column-count: 3;
+	column-width: 30px;
+	column-gap: 80px;
+	word-break: normal;
+}
+
+#ngaba_xprofiles {
+	padding-left: 90px;
+	width: 100%;
+	padding-bottom: 30px;
+	overflow: auto;
+}
+
+#chamdo_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#tawu_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#darlag_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#chentsa_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#dzatoe_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#barkham_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#lhasa_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#themchen_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#dzamthang_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#damshung_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#rebkong_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#nagchu_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#yadzi_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#machu_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#sangchu_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#haidong_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#tridu_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#tsoe_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#labrang_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#dokarmo_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#luchu_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#achok_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#golok_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#kyegudo_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#kardze_xprofiles {
+	padding-left: 90px;
+	overflow: auto;
+	padding-bottom: 30px;
+	width: 100%;
+}
+
+#ngaba_xprofilestop {
+	height: 0px;
+}
+
+#yadzi_xprofilestop {
+	height: 0px;
+}
+
+#golok_xprofilestop {
+	height: 0px;
+}
+
+#haidong_xprofilestop {
+	height: 0px;
+}
+
+#kyegudo_xprofilestop {
+	height: 0px;
+}
+
+#tsoe_xprofilestop {
+	height: 0px;
+}
+
+#luchu_xprofilestop {
+	height: 0px;
+}
+
+#achok_xprofilestop {
+	height: 0px;
+}
+
+#dokarmo_xprofilestop {
+	height: 0px;
+}
+
+#rebkong_xprofilestop {
+	height: 0px;
+}
+
+#dzamthang_xprofilestop {
+	height: 0px;
+}
+
+#tawu_xprofilestop {
+	height: 0px;
+}
+
+#lhasa_xprofilestop {
+	height: 0px;
+}
+
+#dzatoe_xprofilestop {
+	height: 0px;
+}
+
+#kardze_xprofilestop {
+	height: 0px;
+}
+
+#tridu_xprofilestop {
+	height: 0px;
+}
+
+#chentsa_xprofilestop {
+	height: 0px;
+}
+
+#darlag_xprofilestop{
+	height: 0px;
+}
+
+#nagchu_xprofilestop{
+	height: 0px;
+}
+
+#damshung_xprofilestop{
+	height: 0px;
+}
+
+#chamdo_xprofilestop{
+	height: 0px;
+}
+
+#themchen_xprofilestop {
+	height: 0px;
+}
+
+#machu_xprofilestop {
+	height: 0px;
+}
+
+#barkham_xprofilestop {
+	height: 0px;
+}
+
+#sangchu_xprofilestop {
+	height: 0px;
+}
+
+#labrang_xprofilestop {
+	height: 0px;
+}
+
+#endnote {
+	width: 100%;
+	font-family: "Adobe Caslon Pro";
+	text-align: center;
+	font-style: italic;
+	font-size: 10pt;
+	padding-bottom: 20px;
+}
+
+.martyr_profile {
+	margin-top: 2%;
+	height: 300px;
+	width: 300px;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+	text-align: center;
+	float: left;
+}
+
+.martyr_profile img {
+	height: 80%;
+	width: 80%;
+	border: 0.25px solid black;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+
+mainquote {
+	font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", "Adobe Caslon Pro", sans-serif; 
+	font-size: 22px;
+	font-size: 20px;
+	background-color: black;
+	color: white;
+}
+
+date {
+	font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", "Adobe Caslon Pro", sans-serif; 
+	font-size: 18px;
+}
+
+name {
+	font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Light", "Helvetica Neue", "Adobe Caslon Pro", sans-serif; 
+	font-size: 20px;
+	background-color: black;
+	color: white;
+}
+
+.black_overlay{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+}
+
+.white_content {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    height: 60%;
+    padding: 16px;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+    border-radius: 20px;
+ }
+
+quote {
+    font-family: "Adobe Caslon Pro";
+    font-size: 18px;
+}
+
+a.nav-link:link {
+   color: black;
+   text-decoration: none;
+}
+a.nav-link:visited {
+   color: black;
+   text-decoration: none;
+}
+a.nav-link:hover {
+   color: black;
+   text-decoration: none;
+}
+a.nav-link:active {
+   color: black;
+   text-decoration: none;
+}
+
+.close_box {
+	float: left;
+	width: 50px;
+	height: auto;
+	outline: none;
+}
+
+.close_box img {
+	outline: none;
+	border: 0;
+}
+
+.quote_box {
+	padding-top: 20px;
+	padding-left: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	height: 100px;
+	text-align: justify;
+}
