@@ -113,7 +113,7 @@ a.back-to-top {
 	z-index: 999;
 	right: 2%;
 	bottom: 2%;
-	background: rgb(236, 230, 255) url("file:///Users/Sehhjun/Desktop/photos/up-arrow.png") no-repeat center 43%;
+	background: rgb(236, 230, 255) url("/photos/up-arrow.png") no-repeat center 43%;
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
 	border-radius: 30px;
