@@ -594,3 +594,8 @@ a.nav-link:active {
 	height: 100px;
 	text-align: justify;
 }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
